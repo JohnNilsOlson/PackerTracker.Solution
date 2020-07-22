@@ -35,10 +35,18 @@ namespace PackerTracker.Controllers
       Packer.ClearAll();
       return View();
     }
-    [HttpPost("/packer/{Id}/gear")]
-    public ActionResult Show(string gearType, bool purchased)
+    [HttpGet("/packer/{Id}/addgear")]
+    public ActionResult AddGear(int Id)
     {
-      
+      Packer foundPacker = Packer.Find(Id);
+      return View(foundPacker);
+    }
+    [HttpPost("/packer/{Id}/gearadded")]
+    public ActionResult Show(int Id, string gearType, bool purchased)
+    {
+      Packer foundPacker = Packer.Find(Id);
+      foundPacker.AddGear(gearType, purchased);
+      return RedirectToAction("Show");
     }
   }
 }

@@ -12,18 +12,12 @@
     {
       <p>Add pieces of gear required for your trip!</p>
     } *@
-    <ul>
+    @* <ul>
       @foreach (KeyValuePair<string, bool> entry in Model.Gear)
       {
         <li>@Model.Gear[entry]</li>
       }
-    </ul>
-
-    <form action="/packer/{Id}/gear" method="post">
-      <label for="gearType">Enter a piece of gear needed for this trip:</label>
-      <input id="gearType" name="gearType" type="text">
-      <label for="purchased">Already owned</label>
-      <input type="radio" id="purchased" name="purchased" value="true">
-      <button type="submit">Submit!</button>
-    </form>
+    </ul> *@
+    <a href='/packer/@Model.Id/addgear'>Add gear to your trip</a>
+    
   </body>
