@@ -8,4 +8,14 @@
   </head>
   <body>
     <h1>@Model.TripName</h1>
+
+    
+
+    <form action="/packer/{Id}" method="post">
+      <label for="gearType">Enter a piece of gear needed for this trip:</label>
+      <input id="gearType" name="gearType" type="text">
+      <label for="purchased">Already owned</label>
+      <input type="radio" id="purchased" name="purchased" value="true">
+      <button type="submit">Submit!</button>
+    </form>
   </body>

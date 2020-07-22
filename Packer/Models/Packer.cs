@@ -29,7 +29,7 @@ namespace PackerTracker.Models
     }
     public void AddGear(string gearType, bool purchased)
     {
-      
+      gear.Add(gearType, purchased);
     }
   }
 }
