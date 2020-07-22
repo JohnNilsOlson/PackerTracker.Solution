@@ -1,19 +1,19 @@
 using System.Collections.Generic;
 
-namespace Packer.Models
+namespace PackerTracker.Models
 {
   public class Packer
   {
     public string TripName { get; set; }
     public int Id { get; }
-    public Dictionary<string, string> Gear { get; set; }
+    public Dictionary<string, bool> Gear { get; set; }
     private static List<Packer> _instances = new List<Packer> {};
     public Packer(string tripName)
     {
       TripName = tripName;
       _instances.Add(this);
       Id = _instances.Count;
-      Dictionary<string, string> gear = new Dictionary<string, string> {};
+      Dictionary<string, bool> gear = new Dictionary<string, bool> {};
     }
     public static List<Packer> GetAll()
     {
@@ -22,6 +22,14 @@ namespace Packer.Models
     public static Packer Find(int searchId)
     {
       return _instances[searchId - 1];
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+    public void AddGear(string gearType, bool purchased)
+    {
+      
     }
   }
 }

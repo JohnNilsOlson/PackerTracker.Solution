@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Packer.Controllers
+namespace PackerTracker.Controllers
 {
   public class HomeController : Controller
   {

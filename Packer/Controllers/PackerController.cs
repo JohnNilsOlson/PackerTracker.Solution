@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using Packer.Models;
+using PackerTracker.Models;
 
-namespace Packer.Controllers
+namespace PackerTracker.Controllers
 {
-  public class PackerControllers : Controllers
+  public class PackerController : Controller
   {
     [HttpGet("/packer")]
     public ActionResult Index()
