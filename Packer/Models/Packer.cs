@@ -14,7 +14,14 @@ namespace Packer.Models
       _instances.Add(this);
       Id = _instances.Count;
       Dictionary<string, string> gear = new Dictionary<string, string> {};
-
+    }
+    public static List<Packer> GetAll()
+    {
+      return _instances;
+    }
+    public static Packer Find(int searchId)
+    {
+      return _instances[searchId - 1];
     }
   }
 }
