@@ -35,5 +35,10 @@ namespace PackerTracker.Controllers
       Packer.ClearAll();
       return View();
     }
+    [HttpPost("/packer/{Id}/gear")]
+    public ActionResult Show(string gearType, bool purchased)
+    {
+      
+    }
   }
 }

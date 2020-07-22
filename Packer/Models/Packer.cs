@@ -13,7 +13,7 @@ namespace PackerTracker.Models
       TripName = tripName;
       _instances.Add(this);
       Id = _instances.Count;
-      Dictionary<string, bool> gear = new Dictionary<string, bool> {};
+      Dictionary<string, bool> Gear = new Dictionary<string, bool> {};
     }
     public static List<Packer> GetAll()
     {
@@ -29,7 +29,7 @@ namespace PackerTracker.Models
     }
     public void AddGear(string gearType, bool purchased)
     {
-      gear.Add(gearType, purchased);
+      Gear.Add(gearType, purchased);
     }
   }
 }
